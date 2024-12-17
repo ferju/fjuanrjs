@@ -5,18 +5,15 @@ import ItemCount from './ItemCount'
 function ItemDetail ({ detail }){
 return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={detail?.images[0]} />
+      <Card.Img variant="top" src={detail?.images} />
       <Card.Body>
         <Card.Title>{detail?.title}</Card.Title>
         <Card.Text>
           {detail?.description}
         </Card.Text>
       </Card.Body>
-      <ItemCount />
+      <ItemCount detail={detail} />
     </Card>
-    /*<div>{detail?.title}
-    <ItemCount />
-    </div>*/
 )
 
 
